@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang thanh toán</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .product-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product-image {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .product-name {
+            font-weight: bold;
+        }
+
+        .product-quantity {
+            color: #888;
+        }
+
+        .product-price {
+            color: #4CAF50;
+        }
+
+        .subtotal {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .checkout-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            float: right;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .checkout-button:hover {
+            opacity: 0.8;
+        }
+
+        .payment-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html#">
+            <img src="image/logo_head.png" alt="Web bán hàng" width="250px">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="home.html#">Trang Chủ</a></li>
+                <li><a href="product.html">Sản Phẩm</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="account.html">Tài Khoản</a></li>
+            </ul>
+        </nav>
+        <a href="check-out.html">
+            <img src="image/giohang.png" alt="Giỏ hàng" width="30px">
+        </a>
+    </header>
+    <div class="container">
+        <h2>Giỏ hàng</h2>
+        <ul class="product-list">
+            <li class="product">
+                <img src="image/12.jpg" alt="iPhone 12" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">iPhone 12</p>
+                    <p class="product-quantity">Số lượng: <input type="number" min="0" value="2" onchange="updatePrice(this, 30000)" style="width: 40px"></p>
+                    <p class="product-price">30.000đ</p>
+                </div>
+            </li>
+            <li class="product">
+                <img src="image/s20.jpeg" alt="Hình ảnh sản phẩm" class="product-image">
+                <div class="product-info">
+                    <p class="product-name">Samsung Galaxy S20</p>
+                    <p class="product-quantity">Số lượng: <input type="number" min="0" value="1" onchange="updatePrice(this, 19000)" style="width: 40px"></p>
+                    <p class="product-price">19.000đ</p>
+                </div>
+            </li>
+        </ul>
+        <div class="payment-section">
+            <p class="subtotal">Tổng cộng: <span id="totalPrice">49.000đ</span></p>
+            <button class="checkout-button">Thanh toán</button>
+        </div>
+    </div>
+    <script>
+        function updatePrice(input, price) {
+            const quantity = input.value;
+            const totalPrice = quantity * price;
+            const totalPriceElement = document.getElementById("totalPrice");
+            totalPriceElement.innerText = Number(totalPrice).toLocaleString() + "đ";
+        }
+    </script>
+    <footer>
+        <p>@2023 Power of Vanthai.courses</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trang Chủ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+          }
+          
+          .product-details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+          }
+          
+          .product-image {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          
+          .product-info {
+            text-align: left;
+            margin-left: 20px;
+          }
+          
+          h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+          }
+          
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+          }
+          
+          .product-actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+          }
+          
+          .product-actions select,
+          .product-actions .product-price,
+          .product-actions .buy-button {
+            margin-left: 10px;
+          }
+          
+          .product-description {
+            text-align: left;
+          }
+          
+          .product-description h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+          
+          .product-description p {
+            font-size: 16px;
+          }
+          
+          .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 18px;
+          }
+          
+          .buy-button:hover {
+            background-color: #0056b3;
+          }    
+          .color-buttons {
+            display: flex;
+          }
+          
+          .color-button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .color-button.red {
+            background-color: red;
+          }
+          
+          .color-button.blue {
+            background-color: blue;
+          }
+          
+          .color-button.black {
+            background-color: black;
+          }
+          
+          .color-button.ping {
+            background-color: ping;
+          }
+          
+          .product-price {
+            margin-left: 10px;
+          }
+          
+          .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 18px;
+          }
+          
+          .buy-button:hover {
+            background-color: #0056b3;
+          }
+          #gia {
+            font-size: 24px;
+            font-weight: bold;
+            color: green; /* Màu đỏ */
+          }
+          .product-description {
+            width: 1000px;
+            text-align: left;
+          }
+          
+          .product-description h2 {
+            margin-bottom: 10px;
+            margin-left: 20px;
+          }
+          
+          .product-description h3 {
+            margin-bottom: 20px;
+            margin-left: 20px;
+          }
+          
+          .product-description img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            margin-bottom: 20px;
+          }
+          
+            
+      </style>
+</head>
+<body>
+    <header>
+        <a href="home.html#">
+            <img src="image/logo_head.png" alt="Web bán hàng" width="250px">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="home.html#">Trang Chủ</a></li>
+                <li><a href="product.html">Sản Phẩm</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="account.html">Tài Khoản</a></li>
+            </ul>
+        </nav>
+        <a href="check-out.html">
+            <img src="image/giohang.png" alt="Giỏ hàng" width="30px">
+        </a>
+    </header>
+    <div class="imgbanner">
+        <div class="img-container">
+        <img src="image/banner.png" alt="Banner Promotion">
+        </div>
+    </div>
+    <div class="Noidung_home">
+        <div class="container">
+            <div class="product-details">
+              <div class="product-image" id="productImage"></div>
+              <div class="product-info">
+                <h1>iPhone 13</h1>
+                <ul>
+                  <li>Màn hình: Super Retina XDR 6.1 inch</li>
+                  <li>Hệ điều hành: iOS 14</li>
+                  <li>Chip: Apple A14 Bionic</li>
+                  <li>Bộ nhớ: 64GB/128GB/256GB</li>
+                  <li>Camera: Dual 12MP Ultra Wide và Wide</li>
+                  <li>Pin: 2815mAh</li><br>
+                  <li id="gia">19.000VNĐ</li>
+                </ul>
+              </div>
+            </div>
+            <div class="product-actions">
+                <div class="color-buttons">
+                  <button class="color-button red" data-color="red"></button>
+                  <button class="color-button blue" data-color="blue"></button>
+                  <button class="color-button black" data-color="black"></button>
+                  <button class="color-button ping" data-color="ping"></button>
+                </div>
+                <button type="button" class="buy-button" onclick="window.location.href='check-out.html'">Mua ngay</button>
+
+              </div>
+        </div>
+        <div class="product-description">
+            <h2>Mô tả sản phẩm</h2>
+            <img src="image/iphone-12-note.jpg" alt="iphone" width="900px"><br>
+            <img src="image/iphone-12-tz-chuyen-doi.jpg" alt="iphone" width="900px">
+            <img src="image/iphone-12-desktop-7.jpg" alt="iphone" width="900px">
+          </div>
+        </div>
+          <script >
+            const productImageDiv = document.getElementById("productImage");
+        const colorButtons = document.querySelectorAll(".color-button");
+        const imagePaths = {
+            red: "/image/iPhone13_red.jpg",
+            blue: "/image/iPhone13_blue.jpg",
+            black: "/image/iPhone13_black.jpg",
+            ping: "/image/iPhone13_ping.jpg"
+        };
+        
+        function changeProductImage(color) {
+          const imagePath = imagePaths[color];
+          productImageDiv.style.backgroundImage = `url('${imagePath}')`;
+        }
+        
+        colorButtons.forEach((button) => {
+          button.addEventListener("click", (event) => {
+            const selectedColor = event.target.dataset.color;
+            changeProductImage(selectedColor);
+          });
+        });
+        
+        // Hiển thị ảnh sản phẩm ban đầu
+        changeProductImage("red");
+        
+          </script>
+    </div>
+    <footer>
+        <p>@2023 Power of Vanthai.courses</p>
+    </footer>
+</body>
+</html>
